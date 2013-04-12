@@ -48,8 +48,7 @@ module.exports = function (grunt) {
             jade: {
                 files: [
                     '<%= yeoman.app %>/{,**/}*.jade',
-                    '!<%= yeoman.app %>/setup/sections/{,**/}*.jade',
-                    '!<%= yeoman.app %>/setup/widgets/{,**/}*.jade',
+                    '!{,**/}partials/{,**/}*.jade',
                 ],
                 tasks: ['jade']
             },
@@ -87,8 +86,7 @@ module.exports = function (grunt) {
                     dest: '.tmp',
                     src: [
                         '{,**/}*.jade',
-                        '!{,**/}setup/sections/{,**/}*.jade',
-                        '!{,**/}setup/widgets/{,**/}*.jade'
+                        '!{,**/}partials/{,**/}*.jade',
                     ],
                     ext: '.html'
                 }]
