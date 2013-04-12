@@ -1,11 +1,64 @@
+include partials/mixins
+
 doctype 5
 //if lt IE9
   <html class="no-js lte-ie8">
 //[if gte IE9]><!
-html.no-js(lang='#{language}')
+html.no-js(lang='en')
   //<![endif]
   head
-    title Go Team SAss
+    title Go Team Sass
 
     link(rel="stylesheet", href="/styles/style.css", type="text/css")
   body
+    header
+      h1 Team Sass
+    article(role="main")
+      section.about
+        :markdown
+          # Go Team Sass
+
+          One of the hardest things in the Sass and front end communities in general is being able to find and share work with each other. As such, lots of really great work tends to get duplicated project after project instead of everyone coming together to work towards common goals. We can have all of the install and search features under the sun, but a name neither guarentees us the project we want nor encourages us to collaborate together. We aim to fix that.
+
+          Team Sass is a collective of likeminded front end designers and developers coming together to build awesome, high quality, open source Sass projects. It is also a collection of projects made by said designers and developers, all screened to ensure a minimum level of code quality, broad usefullness, and general all-around awesomeness. All of the projects also share a similar ethos of flexibility and end-user control and are designed to be tools to use as opposed to packages to be applied.
+
+          If you would like to get involved in Team Sass, please reach out to us at [@GoTeamSass](https://twitter.com/goteamsass)
+
+      section.members
+        :markdown
+          # Sassy People
+
+          Team Sass is nothing without its members. Here are the current team members:
+
+          * [Sam Richard](http://github.com/snugug)
+          * [Scott Kellum](http://github.com/scottkellum)
+          * [Mason Wendell](http://github.com/canarymason)
+          * [Claudina Sarahe](http://github.com/misscs)
+
+
+      section.projects
+        h1 Sassy Projects
+
+        //- Color Schemer
+        mixin project('Color Schemer', 'https://github.com/Team-Sass/color-schemer', 'Color schemer is a robust color toolset for Sass.', ['sass', 'compass'])
+
+        //- Modular Scale
+        mixin project('Modular Scale', 'https://github.com/Team-Sass/modular-scale', "Sassy Modular Scale is a Sass based mixin that calculates the incremental values of the modular scale in proportion to a set size and ratio. It was inspired by and adapted from Tim Brown's modularscale.com.", ['sass', 'compass', 'ruby'])
+
+        //- Style Prototypes
+        mixin project('Style Prototypes', 'https://github.com/Team-Sass/Style-Prototypes', "Style Prototypes is a Style Tile, Style Guide, and Color Guide built for designing in browser and allowing for Compass extensions to be built from the design work", ['sass', 'compass', 'ruby', 'grunt', 'bower'])
+
+        //- Singularity
+        mixin project('Singularity', 'https://github.com/Team-Sass/Singularity', "Singularity is a next generation grid framework built from the ground up to be responsive.", ['sass', 'compass', 'ruby'])
+
+        //- Singularity Extras
+        mixin project('Singularity Extras', 'https://github.com/Team-Sass/Singularity-extras', 'Singularity Extras are a set of plugins and add-ons for the Singularity Grid System.', ['sass', 'compass', 'ruby'])
+
+        //- Sassy Math
+        mixin project('Sassy Math', 'https://github.com/Team-Sass/Sassy-math', "Sassy Math is a tool designed to expand upon Sass and Compass's built in mathematic operations to include more advanced functions needed for complex calculations.", ['sass', 'compass', 'ruby'])
+
+        //- Breakpoint
+        mixin project('Breakpoint', 'https://github.com/Team-Sass/breakpoint', "Breakpoint makes writing media queries in Sass super simple. Create a variable using a simplified syntax based on most commonly used media queries, then call it using the breakpoint mixin. Breakpoint handles all of the heavy lifting, from writing the media query itself, to handling cross-browser compatibility issues, so you can focus on what's important: making sure your website looks its best.", ['sass', 'compass', 'ruby'])
+
+        //- Toolkit
+        mixin project('Toolkit', 'https://github.com/Team-Sass/toolkit', "Think of Toolkit as your swiss army knife for Progressive Enhancement and Responsive Web Design. Those little bits and bobs that make your life easy and you want to reuse throughout projects but never really had a place to put? They're here, and they're designed to make your life happy.", ['sass', 'compass', 'ruby'])

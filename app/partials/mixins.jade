@@ -1,0 +1,9 @@
+mixin project(name, link, description, tokens)
+  .project(id=name.replace(/\s+/g, '-').toLowerCase())
+    h2
+      a(href=link)= name
+    p.description= description
+
+    .tokens
+      each token in tokens
+        span(class=token)
